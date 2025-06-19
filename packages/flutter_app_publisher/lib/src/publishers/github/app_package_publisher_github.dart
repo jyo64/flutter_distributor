@@ -28,7 +28,12 @@ class AppPackagePublisherGithub extends AppPackagePublisher {
     Map<String, dynamic>? publishArguments,
     PublishProgressCallback? onPublishProgress,
   }) async {
-    File file = fileSystemEntity as File;
+    File? file = fileSystemEntity is File ? fileSystemEntity : null;
+    if (file == null) {
+      throw PublishError(
+        'The provided path "${fileSystemEntity.path}" is not a valid file.',
+      );
+    }
     PublishGithubConfig publishConfig = PublishGithubConfig.parse(
       environment,
       publishArguments,

@@ -1,15 +1,18 @@
-# flutter_distributor
+# fastforge
 
-[![pub version][pub-image]][pub-url] [![][discord-image]][discord-url] ![][visits-count-image] [![melos](https://img.shields.io/badge/maintained%20with-melos-f700ff.svg?style=flat-square)](https://github.com/invertase/melos) [![All Contributors][all-contributors-image]](#contributors)
+[![pub version][pub-image]][pub-url] [![pub downloads][pub-dm-image]][pub-dm-url] [![][discord-image]][discord-url] [![melos](https://img.shields.io/badge/maintained%20with-melos-f700ff.svg?style=flat-square)](https://github.com/invertase/melos) [![All Contributors][all-contributors-image]](#contributors)
 
-[pub-image]: https://img.shields.io/pub/v/flutter_distributor.svg?style=flat-square
-[pub-url]: https://pub.dev/packages/flutter_distributor
+[pub-image]: https://img.shields.io/pub/v/fastforge.svg?style=flat-square
+[pub-url]: https://pub.dev/packages/fastforge
+[pub-dm-image]: https://img.shields.io/pub/dm/fastforge.svg
+[pub-dm-url]: https://pub.dev/packages/fastforge/score
 [discord-image]: https://img.shields.io/discord/884679008049037342.svg?style=flat-square
 [discord-url]: https://discord.gg/zPa6EZ2jqb
-[visits-count-image]: https://img.shields.io/badge/dynamic/json?label=Visits%20Count&query=value&url=https://api.countapi.xyz/hit/leanflutter.flutter_distributor/visits
-[all-contributors-image]: https://img.shields.io/github/all-contributors/leanflutter/flutter_distributor?color=ee8449&style=flat-square
+[all-contributors-image]: https://img.shields.io/github/all-contributors/fastforgedev/fastforge?color=ee8449&style=flat-square
 
-一款全能的 [Flutter](https://flutter.dev) 应用打包和发布工具，为您提供一站式解决方案，满足各种分发需求。
+卓越的 [Flutter](https://flutter.dev) 应用打包与发布工具，为您提供一站式解决方案，满足各种分发需求。
+
+> **更名通知：** ~~Flutter Distributor~~ 已更名为 Fastforge。如果您之前使用的是 ~~Flutter Distributor~~，请注意所有功能保持不变，但包名、命令和文档已更新以反映此变更。
 
 ---
 
@@ -19,58 +22,58 @@
 
 ## 文档
 
-完整的文档可以在 [distributor.leanflutter.dev](https://distributor.leanflutter.dev/zh-hans) 上找到。
+完整文档请访问 [fastforge.dev](https://fastforge.dev/zh)。
 
-## 功能
+## 主要特性
 
-### 制作器
+- 🚀 一键打包：支持 Android APK/AAB、iOS IPA、OpenHarmony HAP/APP 等多种格式
+- 📦 多平台发布：支持 App Store、Google Play、Firebase、蒲公英、fir.im 等
+- 🔄 CI/CD 集成：完美支持 GitHub Actions、GitLab CI 等持续集成平台
+- 🛠 灵活配置：支持多环境、多 flavor、自定义构建参数
 
-- [aab](./packages/flutter_app_packager/lib/src/makers/aab/) - 为你的应用创建一个 `aab` 包。
-- [apk](./packages/flutter_app_packager/lib/src/makers/apk/) - 为你的应用创建一个 `apk` 包。
-- [appimage](./packages/flutter_app_packager/lib/src/makers/appimage/) - 为你的应用创建一个 `AppImage` 包。
-- [deb](./packages/flutter_app_packager/lib/src/makers/deb/) - 为你的应用创建一个 `deb` 包。
-- [dmg](./packages/flutter_app_packager/lib/src/makers/dmg/) - 为你的应用创建一个 `dmg` 包。
-- [exe](./packages/flutter_app_packager/lib/src/makers/exe/) - 为你的应用创建一个 `exe` 包。
-- [ipa](./packages/flutter_app_packager/lib/src/makers/ipa/) - 为你的应用创建一个 `ipa` 包。
-- [msix](./packages/flutter_app_packager/lib/src/makers/msix/) - 为你的应用创建一个 `msix` 包。
-- [pacman](./packages/flutter_app_packager/lib/src/makers/pacman/) - 为你的应用创建一个 `pacman` 包。
-- [pkg](./packages/flutter_app_packager/lib/src/makers/pkg/) - 为你的应用创建一个 `pkg` 包。
-- [rpm](./packages/flutter_app_packager/lib/src/makers/rpm/) - 为你的应用创建一个 `rpm` 包。
-- [zip](./packages/flutter_app_packager/lib/src/makers/zip/) - 为你的应用创建一个 `zip` 包。
+### 支持的打包格式
 
-### 发布器
+- **Android**: [AAB](https://fastforge.dev/zh/makers/aab), [APK](https://fastforge.dev/zh/makers/apk)
+- **iOS**: [IPA](https://fastforge.dev/zh/makers/ipa)
+- **OpenHarmony**: [HAP](https://fastforge.dev/zh/makers/hap), [APP](https://fastforge.dev/zh/makers/app)
+- **Linux**: [AppImage](https://fastforge.dev/zh/makers/appimage), [DEB](https://fastforge.dev/zh/makers/deb), [RPM](https://fastforge.dev/zh/makers/rpm), Pacman
+- **macOS**: [DMG](https://fastforge.dev/zh/makers/dmg), [PKG](https://fastforge.dev/zh/makers/pkg)
+- **Windows**: [EXE](https://fastforge.dev/zh/makers/exe), [MSIX](https://fastforge.dev/zh/makers/msix)
+- **通用**: [ZIP](https://fastforge.dev/zh/makers/zip)
+- 更多格式持续增加中...
 
-- [appcenter](./packages/flutter_app_publisher/lib/src/publishers/appcenter/) - 把你的应用发布到 `appcenter`.
-- [appstore](./packages/flutter_app_publisher/lib/src/publishers/appstore/) - 把你的应用发布到 `appstore`.
-- [fir](./packages/flutter_app_publisher/lib/src/publishers/fir/) - 把你的应用发布到 `fir`。
-- [firebase](./packages/flutter_app_publisher/lib/src/publishers/firebase/) - 把你的应用发布到 `firebase`。
-- [firebase_hosting](./packages/flutter_app_publisher/lib/src/publishers/firebase_hosting/) - 把你的应用发布到 `firebase_hosting`。
-- [github](./packages/flutter_app_publisher/lib/src/publishers/github/) - 把你的应用发布到 `github` release。
-- [pgyer](./packages/flutter_app_publisher/lib/src/publishers/pgyer/) - 把你的应用发布到 `pgyer`。
-- [playstore](./packages/flutter_app_publisher/lib/src/publishers/playstore/) - Publish your app to `playstore`.
-- [qiniu](./packages/flutter_app_publisher/lib/src/publishers/qiniu/) - 把你的应用发布到 `qiniu`。
-- [vercel](./packages/flutter_app_publisher/lib/src/publishers/vercel/) - 把你的应用发布到 `vercel`。
+### 支持的分发平台
 
-## 立即开始
+- [App Center](https://fastforge.dev/zh/publishers/appcenter)
+- [App Store](https://fastforge.dev/zh/publishers/appstore)
+- [Firebase](https://fastforge.dev/zh/publishers/firebase)
+- [Firebase Hosting](https://fastforge.dev/zh/publishers/firebase-hosting)
+- [FIR](https://fastforge.dev/zh/publishers/fir)
+- [GitHub Releases](https://fastforge.dev/zh/publishers/github)
+- [PGYER](https://fastforge.dev/zh/publishers/pgyer)
+- [Play Store](https://fastforge.dev/zh/publishers/playstore)
+- [Qiniu](https://fastforge.dev/zh/publishers/qiniu)
+- [Vercel](https://fastforge.dev/zh/publishers/vercel)
+- 更多平台持续增加中...
 
-### 安装
+## 安装
 
+```bash
+dart pub global activate fastforge
 ```
-dart pub global activate flutter_distributor
-```
 
-### 用法
+## 快速开始
 
-将 `distribute_options.yaml` 添加到你的项目根目录。
+1. 在项目根目录添加 `distribute_options.yaml` 文件:
 
 ```yaml
 variables:
-  PGYER_API_KEY: "your api key"
+  PGYER_API_KEY: "your api key" # 替换为您自己的 API 密钥
 output: dist/
 releases:
   - name: dev
     jobs:
-      # 构建并发布您的 apk 包到 pgyer
+      # 构建并发布 APK 到 PGYER
       - name: release-dev-android
         package:
           platform: android
@@ -80,7 +83,8 @@ releases:
             dart-define:
               APP_ENV: dev
         publish_to: pgyer
-      # 构建并发布您的 ipa 包到 pgyer
+
+      # 构建并发布 IPA 到 PGYER
       - name: release-dev-ios
         package:
           platform: ios
@@ -92,20 +96,91 @@ releases:
         publish_to: pgyer
 ```
 
-> `build_args` 是 `flutter build` 命令所支持的参数，请根据你的项目进行修改。
+> **注意:** `build_args` 是 `flutter build` 命令支持的参数，请根据您的项目需求进行修改。
 
-#### 发布你的应用
+2. 发布您的应用:
 
+```bash
+fastforge release --name dev
 ```
-flutter_distributor release --name dev
+
+## CLI 命令
+
+### 打包应用
+
+```bash
+fastforge package --platform=android --targets=aab,apk
 ```
 
-## 谁在用使用它？
+### 发布应用包
+
+```bash
+fastforge publish --path dist/your-app-1.0.0+1-android.apk --targets pgyer
+```
+
+### 发布（打包 + 发布）
+
+```bash
+fastforge release --name dev
+```
+
+## 示例项目
+
+Fastforge 包含多个示例项目，帮助您快速上手：
+
+- **[hello_world](https://github.com/fastforgedev/fastforge/tree/main/examples/hello_world)** - 演示核心功能的基础示例。
+- **[multiple_flavors](https://github.com/fastforgedev/fastforge/tree/main/examples/multiple_flavors)** - 展示如何配置多种应用风格的示例。
+- **[custom_binary_name](https://github.com/fastforgedev/fastforge/tree/main/examples/custom_binary_name)** - 展示如何自定义二进制输出名称的示例。
+
+## 高级用法
+
+### 环境变量
+
+Fastforge 支持在配置文件中使用环境变量，这对于 API 密钥等敏感信息非常有用：
+
+```yaml
+variables:
+  API_KEY: ${PGYER_API_KEY} # 使用 PGYER_API_KEY 环境变量
+```
+
+### CI/CD 集成
+
+Fastforge 在 CI/CD 环境中工作良好。例如，使用 GitHub Actions：
+
+```yaml
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+      - name: 安装 Fastforge
+        run: dart pub global activate fastforge
+      - name: 构建并发布
+        run: fastforge release --name production
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+```
+
+更详细的 CI/CD 集成示例请查阅[文档](https://fastforge.dev/zh/)。
+
+## 谁在使用？
 
 - [比译](https://biyidev.com/) - 一个便捷的翻译和词典应用。
 - [钱迹](https://qianjiapp.com/) - 一款纯粹记账的应用。
-- [Alga](https://github.com/laiiihz/alga/) - 一个开发者工具应用。
-- [Airclap](https://airclap.app/) - 任何文件，任意设备，随意发送。简单好用的跨平台高速文件传输APP。
+- [Airclap](https://airclap.app/) - 任何文件，任意设备，随意发送。简单好用的跨平台高速文件传输 APP。
+
+## 参与贡献
+
+欢迎贡献代码！如果您想帮助改进 Fastforge：
+
+1. Fork 仓库
+2. 创建您的特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交您的更改 (`git commit -m '添加一些很棒的特性'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 创建一个 Pull Request
+
+请确保适当更新测试并遵循现有的代码风格。
 
 ## 贡献者
 
@@ -115,25 +190,25 @@ flutter_distributor release --name dev
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lijy91"><img src="https://avatars.githubusercontent.com/u/3889523?v=4?s=100" width="100px;" alt="LiJianying"/><br /><sub><b>LiJianying</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=lijy91" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://juejin.cn/user/764915820276439"><img src="https://avatars.githubusercontent.com/u/8764899?v=4?s=100" width="100px;" alt="Zero"/><br /><sub><b>Zero</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=BytesZero" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/KRTirtho"><img src="https://avatars.githubusercontent.com/u/61944859?v=4?s=100" width="100px;" alt="Kingkor Roy Tirtho"/><br /><sub><b>Kingkor Roy Tirtho</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=KRTirtho" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/laiiihz"><img src="https://avatars.githubusercontent.com/u/35956195?v=4?s=100" width="100px;" alt="LAIIIHZ"/><br /><sub><b>LAIIIHZ</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=laiiihz" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ueki-tomohiro"><img src="https://avatars.githubusercontent.com/u/27331430?v=4?s=100" width="100px;" alt="Tomohiro Ueki"/><br /><sub><b>Tomohiro Ueki</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=ueki-tomohiro" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://cybrox.eu/"><img src="https://avatars.githubusercontent.com/u/2383736?v=4?s=100" width="100px;" alt="Sven Gehring"/><br /><sub><b>Sven Gehring</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=cybrox" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/GargantuaX"><img src="https://avatars.githubusercontent.com/u/14013111?v=4?s=100" width="100px;" alt="GargantuaX"/><br /><sub><b>GargantuaX</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=GargantuaX" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lijy91"><img src="https://avatars.githubusercontent.com/u/3889523?v=4?s=100" width="100px;" alt="LiJianying"/><br /><sub><b>LiJianying</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=lijy91" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://juejin.cn/user/764915820276439"><img src="https://avatars.githubusercontent.com/u/8764899?v=4?s=100" width="100px;" alt="Zero"/><br /><sub><b>Zero</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=BytesZero" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/KRTirtho"><img src="https://avatars.githubusercontent.com/u/61944859?v=4?s=100" width="100px;" alt="Kingkor Roy Tirtho"/><br /><sub><b>Kingkor Roy Tirtho</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=KRTirtho" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/laiiihz"><img src="https://avatars.githubusercontent.com/u/35956195?v=4?s=100" width="100px;" alt="LAIIIHZ"/><br /><sub><b>LAIIIHZ</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=laiiihz" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ueki-tomohiro"><img src="https://avatars.githubusercontent.com/u/27331430?v=4?s=100" width="100px;" alt="Tomohiro Ueki"/><br /><sub><b>Tomohiro Ueki</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=ueki-tomohiro" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://cybrox.eu/"><img src="https://avatars.githubusercontent.com/u/2383736?v=4?s=100" width="100px;" alt="Sven Gehring"/><br /><sub><b>Sven Gehring</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=cybrox" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/GargantuaX"><img src="https://avatars.githubusercontent.com/u/14013111?v=4?s=100" width="100px;" alt="GargantuaX"/><br /><sub><b>GargantuaX</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=GargantuaX" title="Code">💻</a></td>
     </tr>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hiperioncn"><img src="https://avatars.githubusercontent.com/u/6045710?v=4?s=100" width="100px;" alt="Hiperion"/><br /><sub><b>Hiperion</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=hiperioncn" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/GroovinChip"><img src="https://avatars.githubusercontent.com/u/4250470?v=4?s=100" width="100px;" alt="Reuben Turner"/><br /><sub><b>Reuben Turner</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=GroovinChip" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://animator.github.io"><img src="https://avatars.githubusercontent.com/u/615622?v=4?s=100" width="100px;" alt="Ankit Mahato"/><br /><sub><b>Ankit Mahato</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=animator" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://tienisto.com"><img src="https://avatars.githubusercontent.com/u/38380847?v=4?s=100" width="100px;" alt="Tien Do Nam"/><br /><sub><b>Tien Do Nam</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=Tienisto" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://zacksleo.top/"><img src="https://avatars.githubusercontent.com/u/3369169?v=4?s=100" width="100px;" alt="zacks"/><br /><sub><b>zacks</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=zacksleo" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/M97Chahboun"><img src="https://avatars.githubusercontent.com/u/69054810?v=4?s=100" width="100px;" alt="Mohammed  CHAHBOUN"/><br /><sub><b>Mohammed  CHAHBOUN</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=M97Chahboun" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/prateekmedia"><img src="https://avatars.githubusercontent.com/u/41370460?v=4?s=100" width="100px;" alt="Prateek Sunal"/><br /><sub><b>Prateek Sunal</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=prateekmedia" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hiperioncn"><img src="https://avatars.githubusercontent.com/u/6045710?v=4?s=100" width="100px;" alt="Hiperion"/><br /><sub><b>Hiperion</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=hiperioncn" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/GroovinChip"><img src="https://avatars.githubusercontent.com/u/4250470?v=4?s=100" width="100px;" alt="Reuben Turner"/><br /><sub><b>Reuben Turner</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=GroovinChip" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://animator.github.io"><img src="https://avatars.githubusercontent.com/u/615622?v=4?s=100" width="100px;" alt="Ankit Mahato"/><br /><sub><b>Ankit Mahato</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=animator" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://tienisto.com"><img src="https://avatars.githubusercontent.com/u/38380847?v=4?s=100" width="100px;" alt="Tien Do Nam"/><br /><sub><b>Tien Do Nam</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=Tienisto" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://zacksleo.top/"><img src="https://avatars.githubusercontent.com/u/3369169?v=4?s=100" width="100px;" alt="zacks"/><br /><sub><b>zacks</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=zacksleo" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/M97Chahboun"><img src="https://avatars.githubusercontent.com/u/69054810?v=4?s=100" width="100px;" alt="Mohammed  CHAHBOUN"/><br /><sub><b>Mohammed  CHAHBOUN</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=M97Chahboun" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/prateekmedia"><img src="https://avatars.githubusercontent.com/u/41370460?v=4?s=100" width="100px;" alt="Prateek Sunal"/><br /><sub><b>Prateek Sunal</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=prateekmedia" title="Code">💻</a></td>
     </tr>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LailaiMaster"><img src="https://avatars.githubusercontent.com/u/19606597?v=4?s=100" width="100px;" alt="lllgm"/><br /><sub><b>lllgm</b></sub></a><br /><a href="https://github.com/leanflutter/flutter_distributor/commits?author=LailaiMaster" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/LailaiMaster"><img src="https://avatars.githubusercontent.com/u/19606597?v=4?s=100" width="100px;" alt="lllgm"/><br /><sub><b>lllgm</b></sub></a><br /><a href="https://github.com/fastforgedev/fastforge/commits?author=LailaiMaster" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
